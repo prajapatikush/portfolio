@@ -325,7 +325,7 @@ const ResumePage = ({ navigate }) => (
         )}
       </div>
 
-      {profile.resumeUrl && (
+      {resumeUrl && (
         <a href={resumeUrl} download>
           <button className="download-btn">
             <Download size={14} />
