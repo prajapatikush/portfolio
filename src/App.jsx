@@ -108,7 +108,7 @@ const Header = ({ onGoProjects, onGoResume }) => (
     <div className="app-header-inner">
       <div className="app-header-left">
         <div className="logo-badge" />
-        <div className="app-header-title">Portfolio</div>
+        <div className="app-header-title">Home</div>
       </div>
       <div className="header-buttons">
         <button className="header-btn" onClick={onGoProjects}>
@@ -137,7 +137,7 @@ const HomePage = ({ navigate }) => (
     />
 
     {/* Hero */}
-    <section className="page-section">
+	<section className="page-section">
 	  <div className="card hero-card">
 		{/* Left Text Block */}
 		<div className="hero-text">
@@ -156,6 +156,7 @@ const HomePage = ({ navigate }) => (
 		</div>
 	  </div>
 	</section>
+
 
 
     {/* About + major projects */}

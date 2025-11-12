@@ -365,16 +365,14 @@ body {
   font-size: 0.8rem;
 }
 
-/* Hero layout */
+
+
+/* Desktop layout */
 .hero-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-}
-
-.hero-text {
-  flex: 1;
 }
 
 .hero-photo-wrap {
@@ -390,17 +388,23 @@ body {
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
-/* Mobile: stack + smaller image */
+/* Mobile layout */
 @media (max-width: 768px) {
   .hero-card {
-    flex-direction: column;      /* text then image */
-    align-items: flex-start;     /* left align text */
+    flex-direction: column;      /* Stack vertically */
+    align-items: center;         /* Center everything */
+    text-align: center;          /* Center text too */
+  }
+
+  .hero-photo-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;     /* Center image */
   }
 
   .hero-photo {
     width: 220px;
     height: 260px;
     margin-top: 12px;
-    align-self: center;          /* center image under text */
   }
 }
