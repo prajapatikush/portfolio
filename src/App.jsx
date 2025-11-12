@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Mail, Phone, Linkedin, Download, ExternalLink } from "lucide-react";
 import profileImg from "./assets/profile.jpg";
-import resumePdf from "./assets/resume.pdf";
+import resumeUrl from "./assets/resume.pdf";
 
 // === DATA ===
 const profile = {
@@ -71,8 +71,7 @@ const profile = {
       skills: ["Fixture Design", "Lean", "GD&T", "CNC", "SPC"],
       logo: "",
     },
-  ],
-  resumeUrl: "./assets/resume.pdf", // put your real PDF path here
+  ]
 };
 
 // Small reusable pieces
@@ -327,21 +326,21 @@ const ResumePage = ({ navigate }) => (
       <p className="projects-intro">View or download the latest PDF resume.</p>
 
       <div className="resume-frame-wrapper">
-        {profile.resumeUrl ? (
+        {resumeUrl ? (
           <iframe
             title="Resume PDF"
-            src={profile.resumeUrl}
+            src={resumeUrl}
             className="resume-frame"
           />
         ) : (
           <div style={{ padding: 24, fontSize: "0.85rem" }}>
-            Add your PDF URL to <code>profile.resumeUrl</code>.
+            Add your PDF URL to <code>resumeUrl</code>.
           </div>
         )}
       </div>
 
       {profile.resumeUrl && (
-        <a href={profile.resumeUrl} download>
+        <a href={resumeUrl} download>
           <button className="download-btn">
             <Download size={14} />
             Download Resume
