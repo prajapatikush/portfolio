@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Mail, Phone, Linkedin, Download, ExternalLink } from "lucide-react";
+import profileImg from "./assets/profile.jpg";
+import resumePdf from "./assets/resume.pdf";
 
 // === DATA ===
 const profile = {
@@ -70,7 +72,7 @@ const profile = {
       logo: "",
     },
   ],
-  resumeUrl: "/resume.pdf", // put your real PDF path here
+  resumeUrl: "./assets/resume.pdf", // put your real PDF path here
 };
 
 // Small reusable pieces
@@ -148,7 +150,7 @@ const HomePage = ({ navigate }) => (
 		{/* Right Photo Block */}
 		<div style={{ flexShrink: 0 }}>
 		  <img 
-			src="profile.JPG"   // <-- put your image inside public/profile.jpg
+			src={profileImg}
 			alt="Kush Prajapati"
 			style={{
 			  width: "450px",
