@@ -1,0 +1,366 @@
+/* Global reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(99, 102, 241, 0.12), transparent),
+    #f5f5f7;
+  color: #0f172a;
+}
+
+/* Layout wrappers */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.app-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a855f7, #4f46e5);
+}
+
+.app-header-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+/* Header buttons */
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.header-btn {
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: white;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.header-btn:hover {
+  border-color: rgba(15, 23, 42, 0.25);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.header-btn.primary {
+  background: #111827;
+  color: white;
+}
+
+.header-btn.primary:hover {
+  background: #020617;
+}
+
+/* Sections & cards */
+.page-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 16px 8px;
+}
+
+.card {
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+}
+
+/* Hero */
+.hero-tagline {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #6b7280;
+}
+
+.hero-name {
+  margin-top: 8px;
+  font-size: 2.3rem;
+  font-weight: 650;
+}
+
+.hero-subtitle {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  color: #4b5563;
+}
+
+/* Two-column layout */
+.twocol {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .twocol {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Headings */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* About contact buttons */
+.about-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 14px;
+  padding: 6px 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Major projects preview */
+.project-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-list-preview {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-preview-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #f9fafb;
+}
+
+/* Logo circle */
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  background: #eef2ff;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+/* Small meta text */
+.meta-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Skill chips */
+.skill-row {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.7rem;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  background: white;
+}
+
+/* Contact section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Projects page */
+.projects-intro {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.projects-stack {
+  margin-top: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.project-row:last-child {
+  border-bottom: none;
+}
+
+.project-row:hover {
+  background: #f9fafb;
+}
+
+.project-row-title {
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+.project-row-desc {
+  margin-top: 3px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.back-link-btn {
+  margin-top: 18px;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(15, 23, 42, 0.13);
+  background: white;
+  cursor: pointer;
+}
+
+/* Resume page */
+.resume-frame-wrapper {
+  margin-top: 18px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: white;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 70vh;
+  border: none;
+}
+
+.download-btn {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  border: none;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  padding: 0 16px 24px;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 20px auto 0;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+}
