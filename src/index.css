@@ -364,3 +364,43 @@ body {
   gap: 12px;
   font-size: 0.8rem;
 }
+
+/* Hero layout */
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-photo-wrap {
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 450px;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 2px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* Mobile: stack + smaller image */
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;      /* text then image */
+    align-items: flex-start;     /* left align text */
+  }
+
+  .hero-photo {
+    width: 220px;
+    height: 260px;
+    margin-top: 12px;
+    align-self: center;          /* center image under text */
+  }
+}

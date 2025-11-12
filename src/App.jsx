@@ -132,36 +132,22 @@ const HomePage = ({ navigate }) => (
 
     {/* Hero */}
     <section className="page-section">
-	  <div className="card" style={{ 
-		display: "flex", 
-		alignItems: "center", 
-		justifyContent: "space-between",
-		gap: "20px"
-	  }}>
-		
+	  <div className="card hero-card">
 		{/* Left Text Block */}
-		<div style={{ flex: 1 }}>
+		<div className="hero-text">
 		  <div className="hero-tagline">Electromechanical | Robotics | PLC</div>
 		  <h1 className="hero-name">{profile.name}</h1>
 		  <p className="hero-subtitle">{profile.title}</p>
 		</div>
 
 		{/* Right Photo Block */}
-		<div style={{ flexShrink: 0 }}>
-		  <img 
+		<div className="hero-photo-wrap">
+		  <img
 			src={profileImg}
 			alt="Kush Prajapati"
-			style={{
-			  width: "450px",
-			  height: "500px",
-			  borderRadius: "20px",
-			  objectFit: "cover",
-			  border: "2px solid rgba(15,23,42,0.1)",
-			  boxShadow: "0 8px 20px rgba(15,23,42,0.08)"
-			}}
+			className="hero-photo"
 		  />
 		</div>
-
 	  </div>
 	</section>
 
