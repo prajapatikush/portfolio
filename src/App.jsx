@@ -8,9 +8,9 @@ const profile = {
   about:
     "Electromechanical Engineering Technologist specializing in PLC/HMI programming, robotics integration, and data-driven manufacturing. Hands-on with Siemens & Allen-Bradley PLCs, KUKA robots, CMM metrology, and continuous improvement.",
   contact: {
-    email: "kush@example.com",
-    phone: "+1 (555) 123-4567",
-    linkedin: "https://www.linkedin.com/in/your-handle/",
+    email: "prajapatikush33@gmail.com",
+    phone: "+1 (437) 559-0704",
+    linkedin: "https://www.linkedin.com/in/kushkprajapati/",
   },
   majorProjects: [
     {
@@ -148,7 +148,7 @@ const HomePage = ({ navigate }) => (
 		{/* Right Photo Block */}
 		<div style={{ flexShrink: 0 }}>
 		  <img 
-			src="/profile.JPG"   // <-- put your image inside public/profile.jpg
+			src="profile.JPG"   // <-- put your image inside public/profile.jpg
 			alt="Kush Prajapati"
 			style={{
 			  width: "450px",
