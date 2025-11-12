@@ -114,9 +114,15 @@ const Header = ({ onGoProjects, onGoResume }) => (
         <button className="header-btn" onClick={onGoProjects}>
           Projects
         </button>
-        <button className="header-btn primary" onClick={onGoResume}>
-          My Resume
-        </button>
+        <a
+		  href={resumeUrl}
+		  target="_blank"
+		  rel="noopener noreferrer"
+		  className="header-btn primary"
+		  style={{ display: "inline-block", textDecoration: "none" }}
+		>
+		  My Resume
+		</a>
       </div>
     </div>
   </header>
